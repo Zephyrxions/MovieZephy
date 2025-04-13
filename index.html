@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Zephy - Netflix Style Movie App</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Sidebar with logo and vertical text -->
+  <div class="sidebar">
+    <div class="logo-container">
+      <h1 class="logo" id="logo-home">M</h1>
+    </div>
+    <div class="vertical-text">
+      <span>M</span>
+      <span>O</span>
+      <span>V</span>
+      <span>I</span>
+      <span>E</span>
+      <span>&nbsp;</span>
+      <span>Z</span>
+      <span>E</span>
+      <span>P</span>
+      <span>H</span>
+      <span>Y</span>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <main class="main-content">
+    <!-- Header with search -->
+    <header>
+      <div class="header-content">
+        <h1 class="mobile-logo" id="mobile-logo-home">MovieZephy</h1>
+        
+        <div class="search-toggle">
+          <button id="search-toggle-btn" aria-label="Toggle search">
+            <i class="fas fa-search"></i>
+          </button>
+          <div class="search-container" id="search-container">
+            <form id="search-form">
+              <input 
+                type="text" 
+                id="search-input" 
+                placeholder="Search for movies..." 
+              >
+              <button type="submit" class="search-button">
+                <i class="fas fa-search"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero carousel -->
+    <section class="hero-section" id="hero-carousel">
+      <div class="hero-controls">
+        <button id="prev-hero" class="hero-control"><i class="fas fa-chevron-left"></i></button>
+        <button id="next-hero" class="hero-control"><i class="fas fa-chevron-right"></i></button>
+      </div>
+      <div class="hero-slides" id="hero-slides">
+        <!-- Hero slides will be added here by JavaScript -->
+      </div>
+      <div class="hero-indicators" id="hero-indicators">
+        <!-- Indicators will be added here by JavaScript -->
+      </div>
+    </section>
+
+    <!-- Category filters -->
+    <div class="filter-bar">
+      <div class="filters">
+        <button class="filter-btn active" data-category="trending">Trending</button>
+        <button class="filter-btn" data-category="popular">Popular</button>
+        <button class="filter-btn" data-category="top_rated">Top Rated</button>
+        <button class="filter-btn" data-category="upcoming">Upcoming</button>
+        <button class="filter-btn" data-category="now_playing">Now Playing</button>
+      </div>
+    </div>
+
+    <!-- Loading spinner -->
+    <div id="loading" class="loading">
+      <div class="spinner"></div>
+    </div>
+
+    <!-- Movie categories -->
+    <section id="movie-categories" class="movie-categories">
+      <!-- Categories will be added here by JavaScript -->
+    </section>
+  </main>
+
+  <!-- Movie details modal -->
+  <div id="movie-modal" class="modal hidden">
+    <div class="modal-content">
+      <button id="close-modal" class="close-button" aria-label="Close details">
+        <i class="fas fa-times"></i>
+      </button>
+      
+      <div class="modal-backdrop" id="modal-backdrop"></div>
+      
+      <div class="modal-grid">
+        <div class="movie-poster">
+          <img id="modal-poster" src="/placeholder.svg" alt="">
+        </div>
+        
+        <div class="movie-details">
+          <div class="modal-header">
+            <h2 id="modal-title"></h2>
+            <div class="movie-meta">
+              <span id="modal-rating" class="rating"><i class="fas fa-star"></i> </span>
+              <span id="modal-year" class="year"></span>
+              <span id="modal-runtime" class="runtime"></span>
+            </div>
+          </div>
+          
+          <div class="action-buttons">
+            <button class="play-btn" id="play-movie"><i class="fas fa-play"></i> Play</button>
+            <button class="trailer-btn" id="watch-trailer"><i class="fas fa-film"></i> Trailer</button>
+            <button class="add-btn"><i class="fas fa-plus"></i></button>
+          </div>
+          
+          <div class="movie-overview">
+            <p id="modal-overview"></p>
+          </div>
+          
+          <div id="modal-genres-container" class="movie-genres">
+            <h3>Genres</h3>
+            <div id="modal-genres" class="genres-list"></div>
+          </div>
+
+          <div id="modal-cast-container" class="movie-cast">
+            <h3>Cast</h3>
+            <div id="modal-cast" class="cast-list"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Video player modal -->
+  <div id="video-modal" class="video-modal hidden">
+    <button id="close-video" class="close-video-button">
+      <i class="fas fa-times"></i>
+    </button>
+    <div class="video-container" id="video-container">
+      <!-- Video will be added here by JavaScript -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
