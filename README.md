@@ -1,6 +1,7 @@
 # MovieZephy - Aplicación de Películas
 
-![MovieZephy Logo](https://via.placeholder.com/150x50?text=MovieZephy)
+
+![Captura de pantalla 2025-04-12 222832](https://github.com/user-attachments/assets/36b7f60b-9e64-4f04-b834-071963a58b00)
 
 ## 📋 Descripción
 MovieZephy es una aplicación web moderna que consume la API de The Movie Database (TMDB) para mostrar información detallada de películas. La aplicación está diseñada con un estilo similar a Netflix, ofreciendo una experiencia de usuario intuitiva y atractiva.
